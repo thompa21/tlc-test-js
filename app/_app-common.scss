@@ -36,12 +36,31 @@
      horizontal-align: center;
  }
 
- .app-header {
+.app-header {
     padding: 10;
     color: rgb(221, 221, 221);
-    background-color: rgb(108, 147, 206);
     font-family: "Copperplate";
     font-size: 24;
+}
+
+.app-header.home {
+    background-color: rgb(108, 147, 206);
+}
+
+.app-header.ethics {
+    background-color: rgb(206, 175, 108);
+}
+
+.app-header.rules {
+    background-color: rgb(206, 108, 108);
+}
+
+.app-header.game {
+    background-color: rgb(108, 206, 124);
+}
+
+.app-header.settings {
+    background-color: rgb(162, 108, 206);
 }
 
 .drawerbutton {
@@ -57,8 +76,12 @@
 
 .bottom-bar {
     height:50;
-    color:#000000;
+    color:#a1a1a1ad;
     margin:0;
     background-color:rgb(255, 255, 255);
     font-size:40;
+}
+
+.bottom-active {
+    color:#52a4db;
 }

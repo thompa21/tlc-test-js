@@ -1,0 +1,13 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:VideoPlayer="nativescript-videoplayer"
+      actionBarHidden="true"
+      navigatingTo="onNavigatingTo"
+      navigatingFrom="onNavigatingFrom">
+    <StackLayout> 
+        <VideoPlayer:Video id="nativeVideoPlayer"
+        controls="true"
+        loop="true" autoplay="true" 
+        src="{{ src }}"
+        seekToTimeComplete = "videoFinished" />
+    </StackLayout>
+</Page>

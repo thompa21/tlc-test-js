@@ -59,7 +59,7 @@
         -->
         <nsDrawer:RadSideDrawer.mainContent>
             <GridLayout columns="*,*,*,*" rows="auto, auto, *" class="page-content">
-                <GridLayout class="app-header" colSpan="4" columns="auto,auto,*">
+                <GridLayout class="app-header ethics" colSpan="4" columns="auto,auto,*">
                     <Label style="padding-left:10;" text="TLC" col="0" horizontalAlignment="left" verticalAlignment="center" class="actionbartext" />
                     <Label style="padding-left:10;" text="Grönt Kort" col="1" horizontalAlignment="left" verticalAlignment="center" class="actionbartext" />
                     <Label text="&#xe87c;" class="mdi drawerbutton" col="2" horizontalAlignment="right" verticalAlignment="center" tap="onDrawerButtonTap" />
@@ -68,11 +68,11 @@
                     <Label text="Vett & Etikett" row="2" colSpan="2" horizontalAlignment="center" verticalAlignment="center" class="content-header" />
                 </StackLayout>
                 <GridLayout row="2" colSpan="4" rows="*" columns="*,*,*,*,*" class="bottom-bar" verticalAlignment="bottom">
-                    <Label route="home/home-page" tap="onNavigationItemTap" col="0" verticalAlignment="center" horizontalAlignment="center" text="&#xEB45;" class="mdi" />
-                    <Label col="1" verticalAlignment="center" horizontalAlignment="center" text="&#xEB45;" class="mdi" />
-                    <Label route="search/search-page" tap="onNavigationItemTap" col="2" verticalAlignment="center" horizontalAlignment="center" text="&#xEB45;" class="mdi" />
+                    <Label route="home/home-page" tap="onNavigationItemTap" col="0" verticalAlignment="center" horizontalAlignment="center" text="&#xE88A;" class="mdi" />
+                    <Label col="1" verticalAlignment="center" horizontalAlignment="center" text="&#xE8DD;" class="mdi bottom-active" />
+                    <Label route="search/search-page" tap="onNavigationItemTap" col="2" verticalAlignment="center" horizontalAlignment="center" text="&#xE85D;" class="mdi" />
                     <Label route="featured/featured-page" tap="onNavigationItemTap" col="3" verticalAlignment="center" horizontalAlignment="center" text="&#xEB45;" class="mdi" />
-                    <Label route="settings/settings-page" tap="onNavigationItemTap" col="4" verticalAlignment="center" horizontalAlignment="center" text="&#xEB45;" class="mdi" />
+                    <Label route="settings/settings-page" tap="onNavigationItemTap" col="4" verticalAlignment="center" horizontalAlignment="center" text="&#xE8B8;" class="mdi" />
                 </GridLayout>
             </GridLayout>
         </nsDrawer:RadSideDrawer.mainContent>

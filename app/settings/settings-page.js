@@ -30,7 +30,6 @@ function onDrawerButtonTap(args) {
 }
 
 function onNavigationItemTap(args) {
-    console.log('onNavigationItemTap');
     const component = args.object;
     const componentRoute = component.route;
 

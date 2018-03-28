@@ -25,13 +25,11 @@ function onNavigatingTo(args) {
  * use the showDrawer() function to open the app drawer section.
  *************************************************************/
 function onDrawerButtonTap(args) {
-    console.log('onDrawerButtonTap');
     const sideDrawer = frameModule.topmost().getViewById("sideDrawer");
     sideDrawer.showDrawer();
 }
 
 function onNavigationItemTap(args) {
-    console.log('onNavigationItemTap');
     const component = args.object;
     const componentRoute = component.route;
 
