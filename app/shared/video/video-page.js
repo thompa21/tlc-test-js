@@ -14,11 +14,6 @@ function videoFinished() {
     console.log('videoFinished');
 }
 
-//const HomeViewModel = require("./home-view-model");
-
-/* ***********************************************************
-* Use the "onNavigatingTo" handler to initialize the page binding context.
-*************************************************************/
 function onNavigatingTo(args) {
     
     orientationModule.setCurrentOrientation("landscape",function(){
