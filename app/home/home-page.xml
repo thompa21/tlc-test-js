@@ -26,9 +26,9 @@
                 </StackLayout>
                 <GridLayout row="2" colSpan="4" rows="*" columns="*,*,*,*,*" class="bottom-bar" verticalAlignment="bottom">
                     <Label col="0" verticalAlignment="center" horizontalAlignment="center" text="&#xE88A;" class="mdi bottom-active" />
-                    <Label route="browse/browse-page" tap="onNavigationItemTap" col="1" verticalAlignment="center" horizontalAlignment="center" text="&#xE8DD;" class="mdi" />
-                    <Label route="search/search-page" tap="onNavigationItemTap" col="2" verticalAlignment="center" horizontalAlignment="center" text="&#xE85D;" class="mdi" />
-                    <Label route="featured/featured-page" tap="onNavigationItemTap" col="3" verticalAlignment="center" horizontalAlignment="center" text="&#xEB45;" class="mdi" />
+                    <Label route="etiquette/etiquette-page" tap="onNavigationItemTap" col="1" verticalAlignment="center" horizontalAlignment="center" text="&#xE8DD;" class="mdi" />
+                    <Label route="rules/rules-page" tap="onNavigationItemTap" col="2" verticalAlignment="center" horizontalAlignment="center" text="&#xE85D;" class="mdi" />
+                    <Label route="game/game-page" tap="onNavigationItemTap" col="3" verticalAlignment="center" horizontalAlignment="center" text="&#xEB45;" class="mdi" />
                     <Label route="settings/settings-page" tap="onNavigationItemTap" col="4" verticalAlignment="center" horizontalAlignment="center" text="&#xE8B8;" class="mdi" />
                 </GridLayout>
             </GridLayout>

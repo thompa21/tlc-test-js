@@ -12,7 +12,7 @@ function onNavigatingFrom(args){
         var _videoPlayer = page.getViewById("nativeVideoPlayer"); 
         _videoPlayer.destroy();
         orientationModule.orientationCleanup();
-    } else {
+    } else {        
         orientationModule.orientationCleanup();
     }
 }
@@ -25,6 +25,7 @@ function onNavigatingTo(args) {
     if (page.ios) {
         orientationModule.setCurrentOrientation("landscape",function(){});
     } else {
+        page.actionBarHidden = true;
         orientationModule.setCurrentOrientation("landscape",function(){});
     }
 

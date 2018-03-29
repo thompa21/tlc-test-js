@@ -1,6 +1,6 @@
 const observableModule = require("data/observable");
 
-function FeaturedViewModel() {
+function EtiquetteViewModel() {
     const viewModel = observableModule.fromObject({
 
     });
@@ -8,4 +8,4 @@ function FeaturedViewModel() {
     return viewModel;
 }
 
-module.exports = FeaturedViewModel;
+module.exports = EtiquetteViewModel;

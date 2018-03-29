@@ -13,7 +13,7 @@
             tap="onDrawerButtonTap"
             ios.position="left">
         </ActionItem>
-        <Label class="action-bar-title" text="Featured"></Label>
+        <Label class="action-bar-title" text="Game"></Label>
     </ActionBar>
     <nsDrawer:RadSideDrawer id="sideDrawer" showOverNavigation="true">
         <nsDrawer:RadSideDrawer.drawerTransition>
@@ -21,11 +21,11 @@
         </nsDrawer:RadSideDrawer.drawerTransition>
         <nsDrawer:RadSideDrawer.drawerContent>
             <StackLayout>
-                <drawer:drawer-fragment selectedPage="Featured"/>
+                <drawer:drawer-fragment selectedPage="Game"/>
             </StackLayout>
         </nsDrawer:RadSideDrawer.drawerContent>
         <nsDrawer:RadSideDrawer.mainContent>
-            <GridLayout columns="*,*,*,*" rows="auto, auto, *, *, *" class="page-content">
+            <GridLayout columns="*,*,*,*" rows="auto, auto, *, auto" class="page-content">
                 <GridLayout class="app-header game" colSpan="4" columns="auto,auto,*">
                     <!--Image width="60" row="0" col="0" src="~/images/TLCGolf_logo.png" horizontalAlignment="left" verticalAlignment="center" /-->
                     <Label style="padding-left:10;" text="TLC" col="0" horizontalAlignment="left" verticalAlignment="center" class="actionbartext" />
@@ -35,26 +35,33 @@
                 <StackLayout colSpan="4" row="1">
                     <Label text="Spelet" row="2" colSpan="2" horizontalAlignment="center" verticalAlignment="center" class="content-header" />
                 </StackLayout>
-                <GridLayout rows="*" row="2" colSpan="4">
+                <GridLayout row="2" colSpan="4" columns="*">
+                    <ListView class="listview" style="separator-color: transparent;" items="{{ videoList }}">
+                        <ListView.itemTemplate >
+                            <GridLayout columns="auto,*" class="item" url="https://www.tlcgolfit.se/videos/chippning_1.mp4" route="shared/video/video-page" tap="onNavigationItemTap">
+                                <Label col="0" horizontalAlignment="left" verticalAlignment="bottom" text="{{status=='I' ? '&#xE04B;' : '&#xE04C;'}}" class="mdi itemimage" />
+                                <Label col="1" textWrap="true" text="{{ name }}" horizontalAlignment="left" verticalAlignment="center" class="itemtext"/>
+                            </GridLayout>
+                        </ListView.itemTemplate>
+                    </ListView>
+                    <!--FlexboxLayout flexWrap="wrap" height="300" width="300" backgroundColor="lightgray">
+                        <Label text="Label 1" width="100" height="50" backgroundColor="red"/>
+                        <Label text="Label 2" width="100" height="50" backgroundColor="green"/>
+                        <Label text="Label 3" width="100" height="50" backgroundColor="blue"/>
+                        <Label text="Label 4" width="100" height="50" backgroundColor="yellow"/>
+                    </FlexboxLayout-->
+                </GridLayout>
+                <!--GridLayout row="3" colSpan="4">
                     <StackLayout>
-                        <ListView class="page-content" style="separator-color: transparent;" items="{{ videoList }}">
-                            <ListView.itemTemplate>
-                                <Label url="https://www.tlcgolfit.se/videos/chippning_1.mp4" route="shared/video/video-page" tap="onNavigationItemTap" text="{{ name }}" horizontalAlignment="left" verticalAlignment="center"/>
-                            </ListView.itemTemplate>
-                        </ListView>
-                    </StackLayout>
-                </GridLayout>
-                <GridLayout row="3" colSpan="4">
-                    <StackLayout verticalAlignment="bottom">
                         <Label height="50" route="shared/video/video-page" tap="onNavigationItemTap" col="0" verticalAlignment="center" horizontalAlignment="center" text="TLC Video" />
                         <Label height="50" route="shared/video/video-page" tap="onNavigationItemTap" col="0" verticalAlignment="center" horizontalAlignment="center" text="TLC Video" />
                         <Label height="50" route="shared/video/video-page" tap="onNavigationItemTap" col="0" verticalAlignment="center" horizontalAlignment="center" text="TLC Video" />
                     </StackLayout>
-                </GridLayout>
-                <GridLayout row="4" colSpan="4" rows="*" columns="*,*,*,*,*" class="bottom-bar" verticalAlignment="bottom">
+                </GridLayout-->
+                <GridLayout row="3" colSpan="4" rows="*" columns="*,*,*,*,*" class="bottom-bar" verticalAlignment="bottom">
                     <Label route="home/home-page" tap="onNavigationItemTap" col="0" verticalAlignment="center" horizontalAlignment="center" text="&#xE88A;" class="mdi" />
-                    <Label route="browse/browse-page" tap="onNavigationItemTap" col="1" verticalAlignment="center" horizontalAlignment="center" text="&#xE8DD;" class="mdi" />
-                    <Label route="search/search-page" tap="onNavigationItemTap" col="2" verticalAlignment="center" horizontalAlignment="center" text="&#xE85D;" class="mdi" />
+                    <Label route="etiquette/etiquette-page" tap="onNavigationItemTap" col="1" verticalAlignment="center" horizontalAlignment="center" text="&#xE8DD;" class="mdi" />
+                    <Label route="rules/rules-page" tap="onNavigationItemTap" col="2" verticalAlignment="center" horizontalAlignment="center" text="&#xE85D;" class="mdi" />
                     <Label col="3" verticalAlignment="center" horizontalAlignment="center" text="&#xEB45;" class="mdi bottom-active" />
                     <Label route="settings/settings-page" tap="onNavigationItemTap" col="4" verticalAlignment="center" horizontalAlignment="center" text="&#xE8B8;" class="mdi" />
                 </GridLayout>

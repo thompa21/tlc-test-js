@@ -1,6 +1,6 @@
 const frameModule = require("ui/frame");
 
-const FeaturedViewModel = require("./featured-view-model");
+const GameViewModel = require("./game-view-model");
 
 const fromObject = require("data/observable").fromObject;
 
@@ -15,9 +15,9 @@ function onNavigatingTo(args) {
     var ObservableArray = require("data/observable-array").ObservableArray;
     var lista = new ObservableArray();
 
-    http.getJSON("https://apps.lib.kth.se/webservices/mrbs/api/v1/noauth/entries/?limit=10").then(function(result) {
+    http.getJSON("https://apps.lib.kth.se/webservices/mrbs/api/v1/noauth/entries/?limit=50").then(function(result) {
         for (i=0;i<result.length;i++) {
-            lista.push({name: result[i].name, url: result[i].room_name});
+            lista.push({name: result[i].name, url: result[i].room_name, status: result[i].type});
         };
         var pageData = new observableModule.fromObject({
             videoList: lista
@@ -29,7 +29,7 @@ function onNavigatingTo(args) {
     });
        
     //const page = args.object;
-    //page.bindingContext = new FeaturedViewModel();
+    //page.bindingContext = new GameViewModel();
 }
 
 function onDrawerButtonTap(args) {

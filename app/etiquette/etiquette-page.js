@@ -1,6 +1,6 @@
 const frameModule = require("ui/frame");
 
-const BrowseViewModel = require("./browse-view-model");
+const EtiquetteViewModel = require("./etiquette-view-model");
 
 function onNavigatingTo(args) {
 
@@ -9,7 +9,7 @@ function onNavigatingTo(args) {
     }
 
     const page = args.object;
-    page.bindingContext = new BrowseViewModel();
+    page.bindingContext = new EtiquetteViewModel();
 }
 
 function onDrawerButtonTap(args) {

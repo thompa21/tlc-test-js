@@ -68,8 +68,8 @@
 }
 
 .content-header {
-    font-size: 20px;
-    padding-top: 10px;
+    font-size: 20;
+    padding: 10 0;
     font-family: "Copperplate";
     color: rgb(221, 221, 221);
 }
@@ -84,4 +84,35 @@
 
 .bottom-active {
     color:#52a4db;
+}
+
+.listview {
+    color: black; 
+}
+
+.listview .item {
+    padding: 10 10 10 10;
+    font-size: 20;
+    color: rgb(221, 221, 221);
+}
+
+.listview .itemimage {
+    font-size: 75;
+    color: rgb(108, 206, 124);
+}
+
+.listview .itemtext {
+    padding: 0 0 0 10;
+}
+
+.listview .item .h2 {
+    margin: 0;
+    margin: 0;
+    font-size: 20; 
+}
+
+.listview .item .p {
+    font-size: 14;
+    color: #666;
+    margin: 0; 
 }

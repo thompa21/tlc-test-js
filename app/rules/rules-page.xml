@@ -12,7 +12,7 @@
             tap="onDrawerButtonTap"
             ios.position="left">
         </ActionItem>
-        <Label class="action-bar-title" text="Search"></Label>
+        <Label class="action-bar-title" text="Rules"></Label>
     </ActionBar>
     <nsDrawer:RadSideDrawer id="sideDrawer" showOverNavigation="true">
         <nsDrawer:RadSideDrawer.drawerTransition>
@@ -20,7 +20,7 @@
         </nsDrawer:RadSideDrawer.drawerTransition>
         <nsDrawer:RadSideDrawer.drawerContent>
             <StackLayout>
-                <drawer:drawer-fragment selectedPage="Search"/>
+                <drawer:drawer-fragment selectedPage="Rules"/>
             </StackLayout>
         </nsDrawer:RadSideDrawer.drawerContent>
         <nsDrawer:RadSideDrawer.mainContent>
@@ -35,9 +35,9 @@
                 </StackLayout>
                 <GridLayout row="2" colSpan="4" rows="*" columns="*,*,*,*,*" class="bottom-bar" verticalAlignment="bottom">
                     <Label route="home/home-page" tap="onNavigationItemTap" col="0" verticalAlignment="center" horizontalAlignment="center" text="&#xE88A;" class="mdi" />
-                    <Label route="browse/browse-page" tap="onNavigationItemTap" col="1" verticalAlignment="center" horizontalAlignment="center" text="&#xE8DD;" class="mdi" />
+                    <Label route="etiquette/etiquette-page" tap="onNavigationItemTap" col="1" verticalAlignment="center" horizontalAlignment="center" text="&#xE8DD;" class="mdi" />
                     <Label col="2" verticalAlignment="center" horizontalAlignment="center" text="&#xE85D;" class="mdi bottom-active" />
-                    <Label route="featured/featured-page" tap="onNavigationItemTap" col="3" verticalAlignment="center" horizontalAlignment="center" text="&#xEB45;" class="mdi" />
+                    <Label route="game/game-page" tap="onNavigationItemTap" col="3" verticalAlignment="center" horizontalAlignment="center" text="&#xEB45;" class="mdi" />
                     <Label route="settings/settings-page" tap="onNavigationItemTap" col="4" verticalAlignment="center" horizontalAlignment="center" text="&#xE8B8;" class="mdi" />
                 </GridLayout>
             </GridLayout>
