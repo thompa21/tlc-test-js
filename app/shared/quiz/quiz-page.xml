@@ -1,0 +1,26 @@
+<Page 
+    navigatingTo="onNavigatingTo" 
+    xmlns="http://schemas.nativescript.org/tns.xsd" 
+    xmlns:CheckBox="nativescript-checkbox" loaded="pageLoaded">
+    <GridLayout columns="*" rows="auto,*,*" class="page-content">
+        <GridLayout class="app-header ethics" columns="auto,auto,*">
+            <Label style="padding-left:10;" text="TLC" col="0" horizontalAlignment="left" verticalAlignment="center" class="actionbartext" />
+            <Label style="padding-left:10;" text="{{ videoList.name }}" col="1" horizontalAlignment="left" verticalAlignment="center" class="actionbartext" />
+            <Label text="&#xe87c;" class="mdi drawerbutton" col="2" horizontalAlignment="right" verticalAlignment="center" tap="onDrawerButtonTap" />
+        </GridLayout>
+        <StackLayout row="1">
+            <!--CheckBox:CheckBox text="{{ quiztype }}" fillColor="#fff" color="#fff" id="myCheckbox" />
+            <CheckBox:CheckBox text="CheckBox Label" checked="false" fillColor="#fff" color="#fff" /-->
+            <ListView items="{{ videoList }}" separatorColor="transparent">
+                <ListView.itemTemplate>
+                    <StackLayout class="list-item">
+                        <CheckBox:CheckBox id="{{'box' + id}}" class="list-check" ios:color="#555" text="{{ name }}" fillColor="#fff" tintColor="#333" tap="onPropertyChanged" />
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </StackLayout>
+        <StackLayout row="2">
+            <Button id="box6" text="GO" tap="submitquiz" class="button" />
+        </StackLayout>
+    </GridLayout>
+</Page>

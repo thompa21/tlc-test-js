@@ -24,6 +24,7 @@ function onNavigationItemTap(args) {
     frameModule.topmost().navigate({
         moduleName: componentRoute,
         animated: false,
+        context: { quiztype: "etiquette" }
     });
 }
 

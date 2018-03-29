@@ -15,9 +15,9 @@ function onNavigatingTo(args) {
     var ObservableArray = require("data/observable-array").ObservableArray;
     var lista = new ObservableArray();
 
-    http.getJSON("https://apps.lib.kth.se/webservices/mrbs/api/v1/noauth/entries/?limit=50").then(function(result) {
+    http.getJSON("http://tlcgolfit.se/webservices/tlcgolfit/api/v1/videos?api_key=jbjhvbas56fa865faityvasdfa5f8as5fd8a6scda864s5cd8a4sdc863c861c8136dc1864wq86drc8q6cc1cghfx12gfmoi909").then(function(result) {
         for (i=0;i<result.length;i++) {
-            lista.push({name: result[i].name, url: result[i].room_name, status: result[i].type});
+            lista.push({name: result[i].name, description: result[i].description, type: result[i].type_id, src: result[i].src, image: result[i].image });
         };
         var pageData = new observableModule.fromObject({
             videoList: lista
@@ -40,11 +40,11 @@ function onDrawerButtonTap(args) {
 function onNavigationItemTap(args) {
     const component = args.object;
     const componentRoute = component.route;
-    const componentURL = component.url;
+    const componentSRC = component.src;
     frameModule.topmost().navigate({
         moduleName: componentRoute,
         animated: false,
-        context: { url: componentURL }
+        context: { src: componentSRC }
     });
 }
 

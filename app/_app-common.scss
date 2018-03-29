@@ -15,6 +15,7 @@
 
     background-color: rgba(0, 0, 0, 0.925);
     color: #fff;
+    font-family: "Copperplate";
 
      .page-placeholder {
          color: $page-icon-color;
@@ -48,7 +49,7 @@
 }
 
 .app-header.ethics {
-    background-color: rgb(206, 175, 108);
+    background-color: rgb(197, 149, 59);
 }
 
 .app-header.rules {
@@ -56,7 +57,7 @@
 }
 
 .app-header.game {
-    background-color: rgb(108, 206, 124);
+    background-color: rgb(73, 163, 88);
 }
 
 .app-header.settings {
@@ -72,6 +73,10 @@
     padding: 10 0;
     font-family: "Copperplate";
     color: rgb(221, 221, 221);
+}
+
+.content-button {
+    font-size: 50;
 }
 
 .bottom-bar {
@@ -91,18 +96,21 @@
 }
 
 .listview .item {
-    padding: 10 10 10 10;
-    font-size: 20;
+    padding: 20 10 20 10;
+    font-size: 40;
+    font-weight: bold;
     color: rgb(221, 221, 221);
 }
 
 .listview .itemimage {
     font-size: 75;
-    color: rgb(108, 206, 124);
+    color: rgba(0, 255, 42, 0.336);
 }
 
 .listview .itemtext {
-    padding: 0 0 0 10;
+    padding: 0 10 0 10;
+    /*color: rgb(108, 147, 206);*/
+    background-color: rgba(58, 201, 94, 0.226)
 }
 
 .listview .item .h2 {

@@ -35,9 +35,9 @@ function onNavigatingTo(args) {
     var observableModule = require("data/observable");
     const context = page.navigationContext;
     var pagedata = new observableModule.fromObject({
-        url: context.url
+        src: context.src
     });
-    page.bindingContext = {src: context.url };
+    page.bindingContext = {src: context.src };
 }
 
 exports.onNavigatingTo = onNavigatingTo;

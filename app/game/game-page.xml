@@ -36,11 +36,12 @@
                     <Label text="Spelet" row="2" colSpan="2" horizontalAlignment="center" verticalAlignment="center" class="content-header" />
                 </StackLayout>
                 <GridLayout row="2" colSpan="4" columns="*">
-                    <ListView class="listview" style="separator-color: transparent;" items="{{ videoList }}">
+                    <ListView class="listview" style="separator-color: #ccc;" items="{{ videoList }}">
                         <ListView.itemTemplate >
-                            <GridLayout columns="auto,*" class="item" url="https://www.tlcgolfit.se/videos/chippning_1.mp4" route="shared/video/video-page" tap="onNavigationItemTap">
-                                <Label col="0" horizontalAlignment="left" verticalAlignment="bottom" text="{{status=='I' ? '&#xE04B;' : '&#xE04C;'}}" class="mdi itemimage" />
-                                <Label col="1" textWrap="true" text="{{ name }}" horizontalAlignment="left" verticalAlignment="center" class="itemtext"/>
+                            <GridLayout columns="*" rows="auto,auto" class="item" src="{{ src }}" route="shared/video/video-page" tap="onNavigationItemTap">
+                                <Image row="0" col="0" src="{{'~/images/' + image }}"></Image>
+                                <!--Label row="0" horizontalAlignment="center" verticalAlignment="bottom" text="{{status=='I' ? '&#xE04B;' : '&#xE04C;'}}" class="mdi itemimage" /-->
+                                <Label style="font-size:30; background-color: rgba(100,100,100,0.700)" width="100%" row="0" col="0" textWrap="true" text="{{ name }}" horizontalAlignment="left" verticalAlignment="bottom" class="itemtext"/>
                             </GridLayout>
                         </ListView.itemTemplate>
                     </ListView>
