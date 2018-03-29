@@ -44,20 +44,7 @@
                             </GridLayout>
                         </ListView.itemTemplate>
                     </ListView>
-                    <!--FlexboxLayout flexWrap="wrap" height="300" width="300" backgroundColor="lightgray">
-                        <Label text="Label 1" width="100" height="50" backgroundColor="red"/>
-                        <Label text="Label 2" width="100" height="50" backgroundColor="green"/>
-                        <Label text="Label 3" width="100" height="50" backgroundColor="blue"/>
-                        <Label text="Label 4" width="100" height="50" backgroundColor="yellow"/>
-                    </FlexboxLayout-->
                 </GridLayout>
-                <!--GridLayout row="3" colSpan="4">
-                    <StackLayout>
-                        <Label height="50" route="shared/video/video-page" tap="onNavigationItemTap" col="0" verticalAlignment="center" horizontalAlignment="center" text="TLC Video" />
-                        <Label height="50" route="shared/video/video-page" tap="onNavigationItemTap" col="0" verticalAlignment="center" horizontalAlignment="center" text="TLC Video" />
-                        <Label height="50" route="shared/video/video-page" tap="onNavigationItemTap" col="0" verticalAlignment="center" horizontalAlignment="center" text="TLC Video" />
-                    </StackLayout>
-                </GridLayout-->
                 <GridLayout row="3" colSpan="4" rows="*" columns="*,*,*,*,*" class="bottom-bar" verticalAlignment="bottom">
                     <Label route="home/home-page" tap="onNavigationItemTap" col="0" verticalAlignment="center" horizontalAlignment="center" text="&#xE88A;" class="mdi" />
                     <Label route="etiquette/etiquette-page" tap="onNavigationItemTap" col="1" verticalAlignment="center" horizontalAlignment="center" text="&#xE8DD;" class="mdi" />
