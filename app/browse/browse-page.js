@@ -22,7 +22,8 @@ function onNavigationItemTap(args) {
     const componentRoute = component.route;
 
     frameModule.topmost().navigate({
-        moduleName: componentRoute
+        moduleName: componentRoute,
+        animated: false,
     });
 }
 

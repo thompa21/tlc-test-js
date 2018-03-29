@@ -43,6 +43,7 @@ function onNavigationItemTap(args) {
     const componentURL = component.url;
     frameModule.topmost().navigate({
         moduleName: componentRoute,
+        animated: false,
         context: { url: componentURL }
     });
 }
