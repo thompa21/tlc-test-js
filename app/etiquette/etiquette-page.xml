@@ -15,7 +15,7 @@
             </StackLayout>
         </nsDrawer:RadSideDrawer.drawerContent>
         <nsDrawer:RadSideDrawer.mainContent>
-            <GridLayout columns="*,*,*,*" rows="auto,auto,*,*,*" class="page-content">
+            <GridLayout columns="*,*,*,*" rows="auto, auto, auto,*,*" class="page-content">
                 <GridLayout class="app-header ethics" colSpan="4" columns="auto,auto,*">
                     <Label style="padding-left:10;" text="TLC" col="0" horizontalAlignment="left" verticalAlignment="center" class="actionbartext" />
                     <Label style="padding-left:10;" text="Grönt Kort" col="1" horizontalAlignment="left" verticalAlignment="center" class="actionbartext" />
@@ -24,11 +24,17 @@
                 <StackLayout colSpan="4" row="1">
                     <Label text="Vett & Etikett" row="2" colSpan="2" horizontalAlignment="center" verticalAlignment="center" class="content-header" />
                 </StackLayout>
-                <GridLayout row="2" class="" colSpan="4" columns="*,*">
-                    <Label route="shared/quiz/quiz-page" tap="onNavigationItemTap" col="0" verticalAlignment="center" horizontalAlignment="center" text="&#xE8DD;" class="mdi content-button" />
-                    <Label col="1" verticalAlignment="center" horizontalAlignment="center" text="&#xE85D;" class="mdi content-button" />
+                <GridLayout style="padding: 10 0 20 0" row="2" class="" colSpan="4" columns="*,*">
+                    <StackLayout col="0">
+                        <Label route="shared/quiz/quiz-page" tap="onNavigationItemTap" col="0" verticalAlignment="center" horizontalAlignment="center" text="&#xf059;" class="fa content-button" />
+                        <Label style="padding: 10 0 0 0" col="0" verticalAlignment="center" horizontalAlignment="center" text="Quiz" class="" />
+                    </StackLayout>
+                    <StackLayout col="1">
+                        <Label route="shared/video/video-page" tap="onNavigationItemTap" col="1" verticalAlignment="center" horizontalAlignment="center" text="&#xf008;" class="fa content-button" />
+                        <Label style="padding: 10 0 0 0" row="1" col="0" verticalAlignment="center" horizontalAlignment="center" text="Video" class="" />
+                    </StackLayout>
                 </GridLayout>
-                <GridLayout row="3" class="" colSpan="4" rows="*,*,*" columns="*,*">
+                <GridLayout row="3" class="" colSpan="4" rows="auto,*,*" columns="*,*">
                     <Label row="0" col="0" colSpan="2" verticalAlignment="center" horizontalAlignment="center" text="Resultat" class="" />
                     <Label row="1" col="0" verticalAlignment="center" horizontalAlignment="center" text="Video:" quiztype="etiquette" class="" />
                     <Label row="2" col="0" verticalAlignment="center" horizontalAlignment="center" text="Quiz:" class="" />

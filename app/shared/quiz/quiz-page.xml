@@ -2,7 +2,7 @@
     navigatingTo="onNavigatingTo" 
     xmlns="http://schemas.nativescript.org/tns.xsd" 
     xmlns:CheckBox="nativescript-checkbox" loaded="pageLoaded">
-    <GridLayout columns="*" rows="auto,auto,*,*" class="page-content">
+    <GridLayout columns="*" rows="auto,auto,*,auto" class="page-content">
         <GridLayout class="app-header ethics" columns="auto,auto,*">
             <Label style="padding-left:10;" text="TLC" col="0" horizontalAlignment="left" verticalAlignment="center" class="actionbartext" />
             <Label style="padding-left:10;" text="Grönt Kort" col="1" horizontalAlignment="left" verticalAlignment="center" class="actionbartext" />
@@ -14,6 +14,7 @@
         <StackLayout row="2">
             <!--CheckBox:CheckBox text="{{ quiztype }}" fillColor="#fff" color="#fff" id="myCheckbox" />
             <CheckBox:CheckBox text="CheckBox Label" checked="false" fillColor="#fff" color="#fff" /-->
+            <ScrollView>
             <Repeater items="{{ quizList }}" separatorColor="transparent">
                 <Repeater.itemTemplate>
                     <!--CheckBox:CheckBox id="{{'box' + number}}" class="list-check" 
@@ -22,14 +23,15 @@
                             <Repeater items="{{ questions }}" separatorColor="transparent">
                                 <Repeater.itemTemplate>
                                     <StackLayout class="list-item">
-                                        <Label style="padding:10" text="{{ question }}" />
+                                        <Label textWrap="true" style="padding:10" text="{{number + '. ' + question }}" />
+                                        <Image src="{{ image }}"></Image>
                                         <Repeater items="{{ options }}" separatorColor="transparent">
                                             <Repeater.itemTemplate>
                                                 <GridLayout style="padding:10" columns="auto,*" rows="auto">
-                                                    <Label style="padding:0 10 0 20; font-size:24" col="0" id="{{'option' + id}}" questionid="et" checked="false" text="&#xf10C;" 
-                                                        class="fa" 
+                                                    <Label style="padding:0 10 0 20; font-size:24" col="0" id="{{'option' + id}}" questionoption_id = "{{ id }}" quizquestion_id="{{ quizquestion_id }}" checked="{{ is_checked }}" text="{{is_checked ==='true' ? '&#xe834;' : '&#xe835;'}}" 
+                                                        class="mdi" 
                                                         tap="onPropertyChanged" />
-                                                    <Label col="1" text="{{ option }}" />
+                                                    <Label textWrap="true" col="1" text="{{ option }}" />
                                                 </GridLayout>
                                             </Repeater.itemTemplate>
                                         </Repeater>
@@ -39,6 +41,7 @@
                         </StackLayout>
                 </Repeater.itemTemplate>
             </Repeater>
+            </ScrollView>
         </StackLayout>
         <StackLayout row="3" verticalAlignment="bottom">
             <Button id="box6" text="GO" tap="submitquiz" class="button" />
